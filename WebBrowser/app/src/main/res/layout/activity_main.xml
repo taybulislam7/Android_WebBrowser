@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1">
+        <EditText
+            android:id="@+id/editTextLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/urlTxt"
+            android:textColorHint="@color/white"
+            android:layout_weight="15"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:backgroundTint="#F3EEEF"
+            android:layout_marginLeft="5dp"/>
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Go"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:id="@+id/webViewProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        <WebView
+            android:id="@+id/WebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/webViewProgress"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black">
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="back"/>
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Refresh"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/btn_foreword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foreword"
+            android:layout_marginLeft="24dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
